@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.profile-card-bg {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #181c24 0%, #232526 100%);
+}
+
+.profile-card {
+    background: rgba(35, 43, 54, 0.95);
+    box-shadow: 0 12px 32px rgba(20, 30, 50, 0.35);
+    padding: 3.5rem 2.5rem 2.5rem 2.5rem;
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+    border: 2px solid;
+    border-image: linear-gradient(135deg, #0ea5e9 0%, #1e293b 100%);
+    border-image-slice: 1;
+    transition: transform 0.2s, box-shadow 0.2s;
+    backdrop-filter: blur(2px);
+}
+
+.profile-card:hover {
+    transform: translateY(-8px) scale(1.025);
+    box-shadow: 0 20px 48px rgba(14, 165, 233, 0.18);
+}
+
+.profile-card-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #0ea5e9;
+    box-shadow: 0 4px 16px rgba(14, 165, 233, 0.15);
+    margin-bottom: 1.5rem;
+    background: #1e293b;
+    transition: border-color 0.2s;
+}
+
+.profile-card:hover .profile-card-img {
+    border-color: #38bdf8;
+}
+
+.profile-card-name {
+    margin: 0.75rem 0 0.25rem 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #e0e7ef;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.profile-card-name::after {
+    content: '';
+    display: block;
+    margin: 0.5rem auto 0 auto;
+    width: 60px;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #0ea5e9 0%, #1e293b 100%);
+}
+
+.profile-card-bio {
+    color: #b6c2d1;
+    font-size: 1.15rem;
+    margin-top: 1.2rem;
+    line-height: 1.7;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+}
+
+@media (max-width: 600px) {
+    .profile-card {
+        padding: 2rem 1rem 1.5rem 1rem;
+        max-width: 95vw;
+    }
+    .profile-card-img {
+        width: 100px;
+        height: 100px;
+    }
+    .profile-card-name {
+        font-size: 1.4rem;
+    }
+}
