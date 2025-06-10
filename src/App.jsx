@@ -1,4 +1,3 @@
-import './App.css'
 import ProfileCard from './components/ProfileCard'
 import me from './assets/kz.jpg'
 
